@@ -1,5 +1,9 @@
 import React from "react";
 import "../styles/globals.css";
+import Head from "next/head";
+import { Provider } from "react-redux";
+
+import store from "../src/store";
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
@@ -9,11 +13,12 @@ function MyApp({ Component, pageProps }) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+
   return (
     <>
       <Head>
-        <title>Gen Z Robots</title>
-        <link rel="icon" href="/2.png" />
+        <title>Awesome Profiles | Home</title>
+        <link rel="icon" href="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Monoton&family=Ubuntu:wght@300;400;500&display=swap"
           rel="stylesheet"
@@ -23,7 +28,9 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }

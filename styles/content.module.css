@@ -1,0 +1,17 @@
+.root {
+  height: 100%;
+  display: flex;
+}
+.avatar {
+  height: 180px;
+  width: 180px;
+  margin: 0 auto;
+}
+.avatar img {
+  height: 100%;
+  border-radius: 50%;
+  background: rgb(8, 149, 165);
+}
+.details p {
+  padding: 5px 12px;
+}
