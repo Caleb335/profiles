@@ -10,8 +10,7 @@ import Spinner from "../components/Spinner";
 import { getProfile } from "../store/actions";
 
 const Container = () => {
-  const [loading, setLoading] = React.useState(true);
-  const { profile } = useSelector((state) => state);
+  const { profile, loading } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   const getProfiles = async () => {
@@ -29,6 +28,10 @@ const Container = () => {
   React.useEffect(() => {
     getProfiles();
   }, []);
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <section className={style.root}>
