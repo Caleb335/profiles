@@ -1,6 +1,7 @@
 .root {
   height: 100%;
-  display: flex;
+  width: 100%;
+  padding: 5% 4%;
 }
 .avatar {
   height: 180px;
@@ -10,8 +11,20 @@
 .avatar img {
   height: 100%;
   border-radius: 50%;
-  background: rgb(8, 149, 165);
+  background: #adefd1ff;
 }
 .details p {
   padding: 5px 12px;
+  font-weight: 300;
+}
+.details h2 {
+  font-weight: 400;
+  padding: 12px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .root {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
