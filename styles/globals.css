@@ -41,8 +41,29 @@ a {
   transition: transform 0.3s ease-in;
 }
 
+/* header && footer */
+.header {
+  height: 80px;
+  background: #072a4d;
+  color: #fff;
+}
+.header h1 {
+  font-weight: 500;
+  padding: 15px 0;
+}
+.footer {
+  background: #072a4d;
+  height: 110px;
+  color: #fff;
+  padding: 5% 0;
+}
+/* section ends here */
+
 @media only screen and (max-width: 768px) {
   .base-card {
     width: 100%;
+  }
+  .header h1 {
+    padding: 20px 0;
   }
 }
