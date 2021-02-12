@@ -23,6 +23,11 @@
   font-weight: 400;
   padding: 12px 0;
 }
+.userInfo {
+  width: 100%;
+  border-top: 2px solid #adefd1ff;
+  padding: 2% 0;
+}
 
 @media only screen and (max-width: 768px) {
   .root {
