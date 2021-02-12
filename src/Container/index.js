@@ -27,7 +27,6 @@ const Container = () => {
         "https://jsonplaceholder.typicode.com/users"
       );
       dispatch(getProfile(userProfiles.data));
-      console.log(getProfile(userProfiles.data));
     } catch (error) {
       dispatch(errorFetching(error));
     }
@@ -40,10 +39,17 @@ const Container = () => {
   return (
     <section className={style.root}>
       {loading ? (
-        <Grid container spacing={10}>
+        <Grid container spacing={4}>
           {profile.map((users) => {
             return (
-              <Grid item xs={12} sm={6} lg={4} key={users.id}>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                lg={4}
+                key={users.id}
+                className={`cont-card`}
+              >
                 <Card>
                   <div className={style.avatar}>
                     <img

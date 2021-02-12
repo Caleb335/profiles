@@ -7,13 +7,13 @@
   height: 180px;
   width: 180px;
   margin: 0 auto;
-  margin-top: -20%;
+  margin-top: -16%;
 }
 .avatar img {
   height: 100%;
   border-radius: 50%;
   background: #adefd1ff;
-  border: 4px solid ghostwhite;
+  border: 6px solid ghostwhite;
 }
 .details p {
   padding: 5px 12px;
@@ -33,6 +33,6 @@
   .root {
     width: 100%;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 10%;
   }
 }
