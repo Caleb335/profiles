@@ -5,7 +5,7 @@ const Spinner = () => {
   return (
     <div className={style.spinner}>
       <div className={style.cube1}></div>
-      <div class={style.cube2}></div>
+      <div className={style.cube2}></div>
     </div>
   );
 };

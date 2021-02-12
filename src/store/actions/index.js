@@ -1,4 +1,4 @@
-import { GET_PROFILES, LOADING } from "../types";
+import { GET_PROFILES, LOADING, ERROR } from "../types";
 
 export const getProfile = (payload) => {
   return {
@@ -7,8 +7,15 @@ export const getProfile = (payload) => {
   };
 };
 
-export const loading = () => {
+export const loadProfiles = () => {
   return {
     type: LOADING,
+  };
+};
+
+export const errorFetching = (payload) => {
+  return {
+    type: ERROR,
+    payload,
   };
 };

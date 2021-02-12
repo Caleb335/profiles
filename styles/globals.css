@@ -29,15 +29,16 @@ a {
 }
 .base-card {
   height: 100%;
-  width: 350px;
+  width: 100%;
   box-shadow: 1px 3px 5px rgba(#072a4d, 0.9);
   background: #00203f;
   padding: 2% 0;
+  padding-top: 80px;
   color: #fff;
 }
 .base-card:hover {
   cursor: pointer;
-  transform: scale(1.03);
+  transform: scale(1.03); /* margin-top: 80px; */
   transition: transform 0.3s ease-in;
 }
 

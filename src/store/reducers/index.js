@@ -1,8 +1,9 @@
-import { GET_PROFILES, LOADING } from "../types";
+import { GET_PROFILES, LOADING, ERROR } from "../types";
 
 const initialState = {
   profile: [],
   loading: false,
+  error: null,
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -11,13 +12,18 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         profile: action.payload,
-        loading: false,
+        loading: true,
       };
     case LOADING:
       return {
         loading: true,
       };
-
+    case ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
     default:
       return state;
   }
