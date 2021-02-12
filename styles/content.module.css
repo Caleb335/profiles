@@ -1,19 +1,19 @@
 .root {
   min-height: 100%;
   width: 100%;
-  padding: 2% 4%;
+  padding: 10% 4%;
 }
 .avatar {
   height: 180px;
   width: 180px;
   margin: 0 auto;
+  margin-top: -20%;
 }
 .avatar img {
   height: 100%;
   border-radius: 50%;
   background: #adefd1ff;
-  /* border: 4px solid rgb(232, 74, 100); */
-  border-bottom-color: rgb(232, 74, 100);
+  border: 4px solid ghostwhite;
 }
 .details p {
   padding: 5px 12px;

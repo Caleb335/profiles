@@ -5,6 +5,14 @@ import axios from "axios";
 import Card from "../components/Card";
 import Grid from "@material-ui/core/Grid";
 
+// svg icons
+import { FiPhone } from "react-icons/fi";
+import { BsHouseFill } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import { GiWireframeGlobe } from "react-icons/gi";
+
+// loader
 import Spinner from "../components/Spinner";
 
 import { getProfile, errorFetching } from "../store/actions";
@@ -32,7 +40,7 @@ const Container = () => {
   return (
     <section className={style.root}>
       {loading ? (
-        <Grid container spacing={4}>
+        <Grid container spacing={10}>
           {profile.map((users) => {
             return (
               <Grid item xs={12} sm={6} lg={4} key={users.id}>
@@ -44,18 +52,29 @@ const Container = () => {
                   </div>
                   <div className={style.details}>
                     <h2 className={`text-center`}>{users.name}</h2>
-                    <p>Email address: {users.email}</p>
-                    <p>Telephone: {users.phone}</p>
-                    <p>
-                      Address:{" "}
-                      {`${users.address.street} ${users.address.suite} ${users.address.city}`}
-                    </p>
-                    <p>
-                      {" "}
-                      Website:
-                      <a href={`https://${users.website}`}> {users.website}</a>
-                    </p>
-                    <p>Company: {users.company.name}</p>
+                    <div className={style.userInfo}>
+                      <p>
+                        <AiOutlineMail /> {users.email}
+                      </p>
+                      <p>
+                        <FiPhone />
+                        {""} {users.phone}
+                      </p>
+                      <p>
+                        <BsHouseFill />{" "}
+                        {`${users.address.street} ${users.address.suite} ${users.address.city}`}
+                      </p>
+                      <p>
+                        <GiWireframeGlobe />
+                        <a href={`https://${users.website}`}>
+                          {" "}
+                          {users.website}
+                        </a>
+                      </p>
+                      <p>
+                        <HiOutlineOfficeBuilding /> {users.company.name}
+                      </p>
+                    </div>
                   </div>
                 </Card>
               </Grid>
