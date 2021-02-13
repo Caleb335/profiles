@@ -43,7 +43,7 @@ a {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
   color: #072a4d;
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: all 0.5s ease-in;
 }
 .base-card:hover img {
   background: #072a4d;
